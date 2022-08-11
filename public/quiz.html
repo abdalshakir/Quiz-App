@@ -6,39 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Quiz App</title>
+
+    <title>Document</title>
+
 </head>
 
 <body>
-    <div class="card text-white bg-info mb-3" style="max-width: 50rem;">
-        <div class="card-header"> 
-            <h5>Q NO. <span id="queNum"></span>/10</h5>
-            <h5 style="text-align: right;">Time <span id="min"></span> : <span id="sec"></span></h5>
-        </div>
-        <div class="question m-3">
-            <h4 id="que"></h4>
-            <label class="check-ans">
-                <input name="ans" value="1" type="radio" class="que-option"> <span id="option1"></span>
-            </label>
-            <br>
-            <label class="check-ans">
-                <input name="ans" value="2" type="radio" class="que-option"> <span id="option2"></span>
-            </label>
-            <br>
-            <label class="check-ans">
-                <input name="ans" value="3" type="radio" class="que-option"> <span id="option3"></span>
-            </label>
-        </div>
-        <div class="card-footer bg-light border-dark">
-            <button onclick="backQuestion()" type="button" id="backButton" class="btn btn-info">Back</button>
-            <button onclick="nextQuestion()" type="button" id="nextButton" class="btn btn-info">Next</button>
+
+    <div class="main">
+        <div class="card text-white bg-info mb-3 m-auto " style="width: 50rem;" id="main-card">
+            <div class="card-header">
+                <h3>Q<span id="queCount"></span>/10</h3>
+            </div>
+            <div class="card-body" style="height: 250px !important;font-size: 25px;">
+                <h4 id="question">
+                </h4>
+                <input type="radio" name="options" id="a" class="options">
+                <label for="a" id="opt1"></label>
+                <br>
+                <input type="radio" name="options" id="b" class="options">
+                <label for="b" id="opt2"></label>
+                <br>
+                <input type="radio" name="options" id="c" class="options">
+                <label for="c" id="opt3"></label>
+            </div>
+            <div class="card-footer bg-light border-dark">
+                <button type="button" class="btn btn-info btn-block" id="next_btn">Next</button>
+            </div>
         </div>
     </div>
-
-
-
 
 
     <script src="app.js"></script>
